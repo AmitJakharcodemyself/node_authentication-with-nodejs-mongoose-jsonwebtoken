@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 
-module.exports = function(req, res, next) {
+module.exports = function(req, res, next) {//importing only function
   const token = req.header("token");//we'll provide it(token) to varify in postman in headers 
   if (!token) return res.status(401).json({ message: "Auth Error" });
 

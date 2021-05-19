@@ -143,7 +143,7 @@ router.post(
       }
     }
   );
-
+  const auth = require("../middleware/auth");
   router.get("/me", auth, async (req, res) => {
     try {
       // request.user is getting fetched from Middleware after token authentication
